@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AutoSizeTextView">
+        <attr name="AutoSizeTextView_measureTextSizeEnabled" format="boolean"/>
+        <attr name="AutoSizeTextView_minTextSizeFactor" format="float"/>
+        <attr name="AutoSizeTextView_maxTextSizeFactor" format="float"/>
+        <attr name="AutoSizeTextView_skipLayoutWidth" format="boolean"/>
+        <attr name="AutoSizeTextView_referenceText" format="string"/>
+    </declare-styleable>
+</resources>

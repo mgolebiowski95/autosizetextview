@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/my_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/space_divider_8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <com.mgsoftware.autosizetextview.AutoSizeTextView
+            style="@style/DefaultTextView"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:text="A B C D E F G H I K L M N O P Q R S T V X Y Z"
+            app:AutoSizeTextView_maxTextSizeFactor="0.75"
+            app:AutoSizeTextView_minTextSizeFactor="0.25" />
+
+        <com.mgsoftware.autosizetextview.AutoSizeTextView
+            style="@style/DefaultTextView"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:text="A B C D E F G H I K L M N O P Q R S T V X Y Z"
+            app:AutoSizeTextView_maxTextSizeFactor="0.75"
+            app:AutoSizeTextView_minTextSizeFactor="0.25"
+            app:AutoSizeTextView_skipLayoutWidth="true" />
+
+        <com.mgsoftware.autosizetextview.AutoSizeTextView
+            style="@style/DefaultTextView"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:text="A B C D E F G H I K L M N O P Q R S T V X Y Z"
+            app:AutoSizeTextView_maxTextSizeFactor="0.75"
+            app:AutoSizeTextView_minTextSizeFactor="0.25"
+            app:AutoSizeTextView_referenceText="A\nA" />
+
+        <com.mgsoftware.autosizetextview.AutoSizeTextView
+            style="@style/DefaultTextView"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="A B C D E F G H I K L M N O P Q R S T V X Y Z"
+            app:AutoSizeTextView_maxTextSizeFactor="0.75"
+            app:AutoSizeTextView_minTextSizeFactor="0.25"
+            app:AutoSizeTextView_referenceText="A\nA" />
+
+        <com.mgsoftware.autosizetextview.AutoSizeTextView
+            style="@style/DefaultTextView"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:text="A B C D E F G H I K L M N O P Q R S T V X Y Z"
+            app:AutoSizeTextView_maxTextSizeFactor="0.75"
+            app:AutoSizeTextView_minTextSizeFactor="0.25"
+            app:AutoSizeTextView_referenceText="A" />
+
+        <com.mgsoftware.autosizetextview.AutoSizeTextView
+            style="@style/DefaultTextView"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:singleLine="true"
+            android:text="A B C D E F G H I K L M N O P Q R S T V X Y Z"
+            app:AutoSizeTextView_maxTextSizeFactor="0.75"
+            app:AutoSizeTextView_minTextSizeFactor="0.25"
+            app:AutoSizeTextView_referenceText="A" />
+
+    </LinearLayout>
+</layout>

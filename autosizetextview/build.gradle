@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 32
+        versionCode = 1
+        versionName "1.0.0"
+
+        project.archivesBaseName = "autosizetextview"
+        project.version = android.defaultConfig.versionName
+    }
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.aar')) {
+                def fileName = "${archivesBaseName}-${version}.aar"
+                outputFileName = fileName
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.0-alpha05'
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    baseName = 'autosizetextview'
+    from android.sourceSets.main.java.srcDirs
+}
