@@ -70,4 +70,5 @@
             app:AutoSizeTextView_referenceText="A" />
 
     </LinearLayout>
+
 </layout>
